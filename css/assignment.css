@@ -1,0 +1,110 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5dc; /* Light Beige */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #ffcc99; /* Peach */
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+/* Main Container */
+.assignment-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Assignments Section */
+.assignments {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Assignment Cards */
+.assignment-card {
+    width: 280px;
+    padding: 15px;
+    background-color: #ffdead; /* Light Brown */
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.2s;
+}
+
+.assignment-card:hover {
+    transform: scale(1.05);
+}
+
+.assignment-card h2 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.assignment-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+.due-date {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: red;
+    font-weight: bold;
+}
+
+.submit-btn {
+    background-color: #ff9966;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #ff704d;
+}
+
+/* Notification Panel */
+.notifications {
+    width: 25%;
+    background-color: #ffe4b5; /* Light Orange */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.notifications h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.notifications ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.notifications li {
+    font-size: 14px;
+    margin-bottom: 8px;
+}

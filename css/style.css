@@ -1,0 +1,98 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: peachpuff;
+}
+
+/* Logo (Top Left Corner) */
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/* Bottom Navigation Bar */
+.bottom-menu {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffffff;
+    padding: 10px 0;
+    box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-item img {
+    width: 30px;
+    height: 30px;
+}
+
+.menu-item:hover {
+    transform: scale(1.1);
+}
+
+/* Animated Background */
+.animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1); */
+    background-size: 400% 400%;
+    animation: gradientAnimation 8s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Animated Text */
+.animated-text {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 80px;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .animated-text {
+        font-size: 22px;
+    }
+}
