@@ -14,4 +14,16 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         })
         .catch(error => console.error("Error loading template:", error));
+
+    // Interactive Prism Effect
+    const prism = document.querySelector(".prism");
+    if (prism) {
+        prism.addEventListener("mouseenter", function () {
+            prism.style.animationDuration = "1s"; // Speed up rotation
+        });
+
+        prism.addEventListener("mouseleave", function () {
+            prism.style.animationDuration = "5s"; // Reset to normal speed
+        });
+    }
 });
