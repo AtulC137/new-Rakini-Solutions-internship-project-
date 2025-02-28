@@ -66,7 +66,7 @@ header {
     align-items: center;
 }
 
-/* Rotating Prism */
+/* 3D Rotating Prism Assembly */
 .assembly {
     display: flex;
     justify-content: center;
