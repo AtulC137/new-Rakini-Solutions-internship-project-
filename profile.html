@@ -3,52 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>GitHub-Style Streak Tracker</title>
     <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <!-- Animated Background -->
-    <div class="animated-bg"></div>
-
-    <!-- Profile Container -->
     <div class="profile-container">
-        <!-- Profile Photo -->
-        <div class="profile-photo">
-            <img src="images/profile-pic.jpg" alt="Profile Photo">
+        <img src="images/git_profile.png" alt="Profile Picture" class="profile-pic">
+        <h2>Your Contributions</h2>
+    </div>
+    
+    <div class="streak-container">
+        <div class="months">
+            <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span>
+            <span>May</span><span>Jun</span><span>Jul</span><span>Aug</span>
+            <span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span>
         </div>
-
-        <!-- Streak Tracker -->
-        <div class="streak-tracker">
-            <h2>Study Streak</h2>
-            <div class="streak-grid">
-                <!-- Streak days will be dynamically generated here -->
-                <div class="streak-day"></div>
-                <div class="streak-day"></div>
-                <div class="streak-day"></div>
-                <div class="streak-day"></div>
-                <div class="streak-day"></div>
-                <div class="streak-day"></div>
-                <div class="streak-day"></div>
-                <!-- Add more days as needed -->
-            </div>
+        <div class="grid">
+            <!-- 365 days grid will be generated here -->
         </div>
+        <div class="legend">
+            <span>Less</span>
+            <div class="color-box level-1"></div>
+            <div class="color-box level-2"></div>
+            <div class="color-box level-3"></div>
+            <div class="color-box level-4"></div>
+            <span>More</span>
+        </div>
+    </div>
 
-        <!-- Metrics -->
-        <div class="metrics">
-            <div class="metric">
-                <h3>Books Read</h3>
-                <p class="metric-value">12</p>
-            </div>
-            <div class="metric">
-                <h3>Assignments Completed</h3>
-                <p class="metric-value">25</p>
-            </div>
-            <div class="metric">
-                <h3>Tests Solved</h3>
-                <p class="metric-value">15</p>
-            </div>
+    <div class="stats-container">
+        <div class="stat-box">
+            <h3>1,337 Total</h3>
+            <p>Sep 14 2012 - Sep 14 2013</p>
+            <p>Year of Contributions</p>
+        </div>
+        <div class="stat-box">
+            <h3>177 days</h3>
+            <p>Feb 21 - Aug 16</p>
+            <p>Longest Streak</p>
+        </div>
+        <div class="stat-box">
+            <h3>0 days</h3>
+            <p>Rock - Hard Place</p>
+            <p>Current Streak</p>
         </div>
     </div>
 
@@ -83,7 +81,16 @@
             <span>PROFILE</span>
         </a>
     </nav>
-
-    <script src="script.js"></script>
+    
+    <script>
+        // JavaScript to generate the grid dynamically
+        const gridContainer = document.querySelector('.grid');
+        for (let i = 0; i < 365; i++) {
+            const box = document.createElement('div');
+            box.classList.add('box');
+            box.classList.add(`level-${Math.floor(Math.random() * 5)}`);
+            gridContainer.appendChild(box);
+        }
+    </script>
 </body>
 </html>

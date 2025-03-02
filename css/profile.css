@@ -1,140 +1,121 @@
-/* Profile Page Styling */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #0d1117; /* GitHub-like dark background */
-    color: white;
+    text-align: center;
+    background-color: #f6f8fa;
+    padding: 20px;
 }
 
 .profile-container {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Profile Photo */
-.profile-photo {
-    margin-bottom: 30px;
-}
-
-.profile-photo img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 3px solid #238636; /* GitHub-like green border */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-/* Streak Tracker */
-.streak-tracker {
-    margin-bottom: 40px;
-}
-
-.streak-tracker h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #c9d1d9; /* GitHub-like text color */
-}
-
-.streak-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
-    max-width: 300px;
-}
-
-.streak-day {
-    width: 30px;
-    height: 30px;
-    background-color: #161b22; /* GitHub-like dark gray */
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.streak-day.active {
-    background-color: #238636; /* GitHub-like green for active days */
-}
-
-.streak-day:hover {
-    background-color: #2ea043; /* Lighter green on hover */
-}
-
-/* Metrics */
-.metrics {
     display: flex;
-    gap: 20px;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.streak-container {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.months {
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(52, 15px); /* Increased column spacing */
+    grid-template-rows: repeat(7, 15px); /* Increased row spacing */
+    gap: 5px; /* Increased gap for better spacing */
+    justify-content: center;
+}
+
+.box {
+    width: 15px;
+    height: 15px;
+    background-color: #ebedf0;
+    border-radius: 3px;
+}
+
+.level-1 { background-color: #c6e48b; }
+.level-2 { background-color: #7bc96f; }
+.level-3 { background-color: #239a3b; }
+.level-4 { background-color: #196127; }
+
+.legend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.color-box {
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
     margin-top: 20px;
 }
 
-.metric {
-    background-color: #161b22; /* GitHub-like dark gray */
-    padding: 20px;
+.stat-box {
+    background: white;
+    padding: 15px;
     border-radius: 10px;
-    text-align: center;
-    flex: 1;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.metric h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #c9d1d9; /* GitHub-like text color */
-}
-
-.metric-value {
-    font-size: 24px;
-    font-weight: bold;
-    color: #238636; /* GitHub-like green for values */
-}
-
-/* Bottom Navigation Bar */
-.bottom-menu {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    background-color: #161b22; /* GitHub-like dark gray */
-    padding: 10px 0;
-    box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.menu-item {
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    font-size: 12px;
+#streak-tracker {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.3s ease;
+    width: 95%;
+    margin: auto;
 }
 
-.menu-item img {
-    width: 30px;
-    height: 30px;
-}
-
-.menu-item:hover {
-    transform: scale(1.1);
-}
-
-/* Animated Background */
-.animated-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
+.month-labels {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
-    height: 100%;
-    background: linear-gradient(-45deg, #0d1117, #161b22, #0d1117, #161b22);
-    background-size: 400% 400%;
-    animation: gradientAnimation 8s ease infinite;
-    z-index: -1;
+    padding: 5px 0;
+    font-size: 12px;
+    font-weight: bold;
+    color: #666;
 }
 
-@keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+.contribution-grid {
+    display: grid;
+    grid-template-columns: repeat(52, 15px); /* Increased spacing */
+    grid-gap: 5px; /* Increased spacing between weeks */
+    padding-top: 5px;
+}
+
+.week-column {
+    display: grid;
+    grid-template-rows: repeat(7, 15px); /* Increased spacing */
+    gap: 5px;
+}
+
+.contribution-cell {
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.contribution-cell:hover {
+    border: 1px solid #333;
 }
