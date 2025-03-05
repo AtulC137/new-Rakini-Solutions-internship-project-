@@ -1,26 +1,55 @@
-/* Notebook Page Styling */
+/* Apply Full-Screen Gradient Background */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #7a5fff 10%, #ff88aa 90%);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* Fixed Background Layer */
+.animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: white;
+    position: relative;
+}
+
+/* Logo - Small & Left-Aligned */
+.logo {
+    width: 50px;
+    height: auto;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+/* Notebook Title */
+.notebook-title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Notebook Content */
 .notebook-container {
     text-align: center;
     margin-top: 50px;
     padding: 20px;
     position: relative;
     z-index: 1;
-}
-
-.notebook-title {
-    font-size: 36px;
-    font-weight: bold;
-    color: #222;
-    animation: floatTitle 3s ease-in-out infinite;
-}
-
-@keyframes floatTitle {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
 }
 
 .notebook-content {
@@ -31,14 +60,15 @@
     margin-top: 30px;
 }
 
+/* Transparent Note Cards */
 .note-card {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 15px;
     padding: 20px;
     width: 250px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: slideIn 1s ease-out;
 }
 
 .note-card:hover {
@@ -46,146 +76,64 @@
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.note-card h2 {
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.note-card p {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 15px;
-}
-
-.note-actions {
+/* Navigation Bar */
+.bottom-menu {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     display: flex;
     justify-content: space-around;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 0;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.edit-btn, .delete-btn {
-    padding: 8px 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+/* Navbar Items */
+.menu-item {
+    text-align: center;
+    text-decoration: none;
+    color: white;
     font-size: 12px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
 }
 
-.edit-btn {
-    background-color: #4CAF50;
-    color: white;
+.menu-item img {
+    width: 30px;
+    height: 30px;
 }
 
-.delete-btn {
-    background-color: #f44336;
-    color: white;
-}
-
-.edit-btn:hover {
-    background-color: #45a049;
+.menu-item:hover {
     transform: scale(1.1);
 }
 
-.delete-btn:hover {
-    background-color: #e53935;
-    transform: scale(1.1);
+.text
+{
+    color: white;
 }
 
-/* Floating Particles Animation */
-.particles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 0;
-}
 
-.particles span {
-    position: absolute;
-    display: block;
-    width: 10px;
-    height: 10px;
-    background: rgba(255, 255, 255, 0.5);
+.add-test-btn {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #28a745;
+    color: white;
+    border: none;
     border-radius: 50%;
-    animation: floatParticles 5s linear infinite;
-    bottom: -100px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, background-color 0.3s;
 }
 
-@keyframes floatParticles {
-    0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-1000px) rotate(720deg);
-        opacity: 0;
-    }
-}
-
-/* Add particles dynamically */
-.particles span:nth-child(1) {
-    left: 10%;
-    animation-delay: 0s;
-}
-
-.particles span:nth-child(2) {
-    left: 20%;
-    animation-delay: 2s;
-}
-
-.particles span:nth-child(3) {
-    left: 30%;
-    animation-delay: 4s;
-}
-
-.particles span:nth-child(4) {
-    left: 40%;
-    animation-delay: 6s;
-}
-
-.particles span:nth-child(5) {
-    left: 50%;
-    animation-delay: 8s;
-}
-
-.particles span:nth-child(6) {
-    left: 60%;
-    animation-delay: 10s;
-}
-
-.particles span:nth-child(7) {
-    left: 70%;
-    animation-delay: 12s;
-}
-
-.particles span:nth-child(8) {
-    left: 80%;
-    animation-delay: 14s;
-}
-
-.particles span:nth-child(9) {
-    left: 90%;
-    animation-delay: 16s;
-}
-
-.particles span:nth-child(10) {
-    left: 100%;
-    animation-delay: 18s;
+.add-test-btn:hover {
+    transform: scale(1.1);
+    background-color: #218838;
 }

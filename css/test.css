@@ -1,0 +1,139 @@
+/* Apply the same gradient background */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #7a5fff 10%, #ff88aa 90%);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* Logo - Small & Fixed in Top Left */
+.logo {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    width: 40px; /* Smaller size */
+    height: auto;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+/* Header (Now Only for Title) */
+header {
+    text-align: center;
+    color: white;
+    padding: 50px 0 20px; /* Increased padding to push content down */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Test Container - Moves Subject Cards Down */
+.test-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    margin-top: 50px; /* Pushes cards further down */
+}
+
+/* Test Cards (Transparent) */
+.test-card {
+    width: 220px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s, background 0.3s;
+    color: white;
+}
+
+.test-card:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Add Test Button (Small Green in Bottom Right) */
+.add-test-btn {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.add-test-btn:hover {
+    transform: scale(1.1);
+    background-color: #218838;
+}
+
+/* Navbar - Transparent with Blur */
+.bottom-menu {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background: rgba(255, 255, 255, 0.2); /* Transparent effect */
+    padding: 10px 0;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Items */
+.menu-item {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.menu-item img {
+    width: 30px;
+    height: 30px;
+}
+
+.menu-item:hover {
+    transform: scale(1.1);
+}
+
+/* Start Test Button - Round & Bright Blue */
+/* Start Test Button - Rectangular & Bright Blue */
+.start-test {
+    width: 120px;
+    height: 45px;
+    background-color: #007BFF; /* Bright blue */
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px; /* Slightly rounded corners */
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.start-test:hover {
+    transform: scale(1.05);
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.text
+{
+    color: white;
+}
